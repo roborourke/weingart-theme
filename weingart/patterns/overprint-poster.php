@@ -23,8 +23,8 @@ $weingart_plates = array(
 		<!-- wp:group {"className":"is-style-overprint","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 		<div class="wp-block-group is-style-overprint">
 <?php foreach ( $weingart_plates as $weingart_plate ) : ?>
-			<!-- wp:group {"style":{"dimensions":{"minHeight":"28rem"},"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"backgroundColor":"<?php echo esc_attr( $weingart_plate[0] ); ?>","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
-			<div class="wp-block-group has-contrast-color has-<?php echo esc_attr( $weingart_plate[0] ); ?>-background-color has-text-color has-background" style="min-height:28rem;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"backgroundColor":"<?php echo esc_attr( $weingart_plate[0] ); ?>","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+			<div class="wp-block-group has-contrast-color has-<?php echo esc_attr( $weingart_plate[0] ); ?>-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">
 				<!-- wp:paragraph {"className":"is-style-label"} -->
 				<p class="is-style-label"><?php echo esc_html( $weingart_plate[1] ); ?></p>
 				<!-- /wp:paragraph -->
