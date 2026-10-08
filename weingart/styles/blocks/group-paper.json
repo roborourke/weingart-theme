@@ -14,7 +14,6 @@
 					"outline": { "color": "var:preset|color|contrast", "offset": "3px", "style": "solid", "width": "3px" }
 				}
 			}
-		},
-		"css": "& .is-style-caption{color:var(--wp--preset--color--muted-strong)}"
+		}
 	}
 }

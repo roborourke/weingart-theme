@@ -71,7 +71,7 @@ function weingart_register_block_styles() {
  * Loads each block's extra CSS only when that block is on the page.
  */
 function weingart_enqueue_block_styles() {
-	foreach ( array( 'core/group', 'core/separator', 'core/post-template' ) as $block_name ) {
+	foreach ( array( 'core/group', 'core/paragraph', 'core/separator', 'core/post-template' ) as $block_name ) {
 		$file = str_replace( 'core/', '', $block_name );
 		wp_enqueue_block_style(
 			$block_name,

@@ -1,0 +1,15 @@
+/* Captions take the colour that passes contrast on the section they sit in.
+   These rules outrank the per-instance caption colour, which has the same specificity as theme.json output. */
+.is-style-paper .is-style-caption,
+.is-style-halftone .is-style-caption {
+	color: var(--wp--preset--color--muted-strong);
+}
+
+.is-style-ink .is-style-caption {
+	color: var(--wp--preset--color--muted);
+}
+
+.is-style-film-cyan .is-style-caption,
+.is-style-film-magenta .is-style-caption {
+	color: inherit;
+}

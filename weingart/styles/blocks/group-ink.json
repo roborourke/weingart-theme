@@ -19,7 +19,6 @@
 			"core/separator": {
 				"color": { "text": "var:preset|color|base" }
 			}
-		},
-		"css": "& .is-style-caption{color:var(--wp--preset--color--muted)}"
+		}
 	}
 }
