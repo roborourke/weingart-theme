@@ -32,7 +32,7 @@ weingart/
   styles/               style variations: basel-red, negative
   styles/blocks/        block and section styles that theme.json can express
   assets/css/blocks/    CSS only for what theme.json cannot do (blend modes, crop marks, counters)
-  assets/fonts/         Archivo (variable, wdth 62-125, wght 100-900), IBM Plex Mono 400/700, licences
+  assets/fonts/         Archivo (variable, wdth 62-125, wght 100-900; Latin and Latin Extended), IBM Plex Mono 400/700, licences
   patterns/             weingart/stepped-hero, index-list, overprint-poster, halftone-quote,
                         specimen, post-grid, archive-loop, colophon
   parts/                header, footer
@@ -64,7 +64,7 @@ Magenta and red are slightly adjusted from the original brief so text passes WCA
 
 ## Fonts
 
-Self-hosted woff2 from the `@fontsource-variable/archivo@5.3.0` and `@fontsource/ibm-plex-mono@5.3.0` packages (Latin subset). Both are under the SIL Open Font License 1.1. The licence texts are in `weingart/assets/fonts/`. Nothing loads from a font CDN at runtime.
+Self-hosted woff2 from the `@fontsource-variable/archivo@5.3.0` and `@fontsource/ibm-plex-mono@5.3.0` packages (Latin subset; Archivo also has Latin Extended). Both are under the SIL Open Font License 1.1. The licence texts are in `weingart/assets/fonts/`. Nothing loads from a font CDN at runtime.
 
 ## Checks
 
