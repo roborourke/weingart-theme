@@ -9,12 +9,6 @@
  *
  * @package Weingart
  */
-
-$weingart_plates = array(
-	array( 'accent-1', __( 'Plate 1 / Cyan', 'weingart' ), __( 'Film', 'weingart' ) ),
-	array( 'accent-2', __( 'Plate 2 / Magenta', 'weingart' ), __( 'Montage', 'weingart' ) ),
-	array( 'accent-3', __( 'Plate 3 / Yellow', 'weingart' ), __( 'Layers', 'weingart' ) ),
-);
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
@@ -22,19 +16,39 @@ $weingart_plates = array(
 	<div class="wp-block-group alignwide is-style-registration">
 		<!-- wp:group {"className":"is-style-overprint","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 		<div class="wp-block-group is-style-overprint">
-<?php foreach ( $weingart_plates as $weingart_plate ) : ?>
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"backgroundColor":"<?php echo esc_attr( $weingart_plate[0] ); ?>","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
-			<div class="wp-block-group has-contrast-color has-<?php echo esc_attr( $weingart_plate[0] ); ?>-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"backgroundColor":"accent-1","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+			<div class="wp-block-group has-contrast-color has-accent-1-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">
 				<!-- wp:paragraph {"className":"is-style-label"} -->
-				<p class="is-style-label"><?php echo esc_html( $weingart_plate[1] ); ?></p>
+				<p class="is-style-label"><?php esc_html_e( 'Plate 1 / Cyan', 'weingart' ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:heading {"level":2,"className":"is-style-condensed","fontSize":"display"} -->
-				<h2 class="wp-block-heading is-style-condensed has-display-font-size"><?php echo esc_html( $weingart_plate[2] ); ?></h2>
+				<h2 class="wp-block-heading is-style-condensed has-display-font-size"><?php esc_html_e( 'Film', 'weingart' ); ?></h2>
 				<!-- /wp:heading -->
 			</div>
 			<!-- /wp:group -->
-<?php endforeach; ?>
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"backgroundColor":"accent-2","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+			<div class="wp-block-group has-contrast-color has-accent-2-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">
+				<!-- wp:paragraph {"className":"is-style-label"} -->
+				<p class="is-style-label"><?php esc_html_e( 'Plate 2 / Magenta', 'weingart' ); ?></p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:heading {"level":2,"className":"is-style-condensed","fontSize":"display"} -->
+				<h2 class="wp-block-heading is-style-condensed has-display-font-size"><?php esc_html_e( 'Montage', 'weingart' ); ?></h2>
+				<!-- /wp:heading -->
+			</div>
+			<!-- /wp:group -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"backgroundColor":"accent-3","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
+			<div class="wp-block-group has-contrast-color has-accent-3-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">
+				<!-- wp:paragraph {"className":"is-style-label"} -->
+				<p class="is-style-label"><?php esc_html_e( 'Plate 3 / Yellow', 'weingart' ); ?></p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:heading {"level":2,"className":"is-style-condensed","fontSize":"display"} -->
+				<h2 class="wp-block-heading is-style-condensed has-display-font-size"><?php esc_html_e( 'Layers', 'weingart' ); ?></h2>
+				<!-- /wp:heading -->
+			</div>
+			<!-- /wp:group -->
 		</div>
 		<!-- /wp:group -->
 	</div>

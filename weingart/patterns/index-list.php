@@ -9,14 +9,6 @@
  *
  * @package Weingart
  */
-
-$weingart_rows = array(
-	array( '01', __( 'Basel', 'weingart' ), __( 'Teaching a way of seeing: exercises in line, point and the page as a field.', 'weingart' ), __( 'School', 'weingart' ) ),
-	array( '02', __( 'Monatsblätter', 'weingart' ), __( 'A trade journal used as a laboratory for type, with covers that broke its own rules.', 'weingart' ), __( 'Journal', 'weingart' ) ),
-	array( '03', __( 'Montage', 'weingart' ), __( 'Film strips layered on a light table, then shot down to a single plate.', 'weingart' ), __( 'Process', 'weingart' ) ),
-	array( '04', __( 'Grid', 'weingart' ), __( 'The Swiss grid as a place to leave from, and the rules that make leaving visible.', 'weingart' ), __( 'Method', 'weingart' ) ),
-	array( '05', __( 'Hand', 'weingart' ), __( 'Pencil, scalpel, photostat. Proofs that kept their glue marks.', 'weingart' ), __( 'Craft', 'weingart' ) ),
-);
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
@@ -27,14 +19,13 @@ $weingart_rows = array(
 	<!-- wp:separator {"className":"is-style-rule-heavy","align":"wide"} -->
 	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-rule-heavy"/>
 	<!-- /wp:separator -->
-<?php foreach ( $weingart_rows as $weingart_row ) : ?>
 
 	<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
 	<div class="wp-block-columns alignwide are-vertically-aligned-center">
 		<!-- wp:column {"verticalAlignment":"center","width":"22%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:22%">
 			<!-- wp:paragraph {"className":"is-style-numeral","fontSize":"display"} -->
-			<p class="is-style-numeral has-display-font-size"><?php echo esc_html( $weingart_row[0] ); ?></p>
+			<p class="is-style-numeral has-display-font-size">01</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -42,11 +33,11 @@ $weingart_rows = array(
 		<!-- wp:column {"verticalAlignment":"center","width":"53%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:53%">
 			<!-- wp:heading {"level":2,"className":"is-style-condensed","fontSize":"xx-large"} -->
-			<h2 class="wp-block-heading is-style-condensed has-xx-large-font-size"><?php echo esc_html( $weingart_row[1] ); ?></h2>
+			<h2 class="wp-block-heading is-style-condensed has-xx-large-font-size"><?php esc_html_e( 'Entry title', 'weingart' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"small"} -->
-			<p class="has-small-font-size"><?php echo esc_html( $weingart_row[2] ); ?></p>
+			<p class="has-small-font-size"><?php esc_html_e( 'Replace with a one-line summary of this entry.', 'weingart' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -54,7 +45,7 @@ $weingart_rows = array(
 		<!-- wp:column {"verticalAlignment":"center","width":"25%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:25%">
 			<!-- wp:paragraph {"className":"is-style-caption"} -->
-			<p class="is-style-caption"><?php echo esc_html( $weingart_row[3] ); ?></p>
+			<p class="is-style-caption"><?php esc_html_e( 'Category', 'weingart' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -64,6 +55,149 @@ $weingart_rows = array(
 	<!-- wp:separator {"className":"is-style-wide","align":"wide"} -->
 	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide"/>
 	<!-- /wp:separator -->
-<?php endforeach; ?>
+
+	<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center">
+		<!-- wp:column {"verticalAlignment":"center","width":"22%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:22%">
+			<!-- wp:paragraph {"className":"is-style-numeral","fontSize":"display"} -->
+			<p class="is-style-numeral has-display-font-size">02</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"53%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:53%">
+			<!-- wp:heading {"level":2,"className":"is-style-condensed","fontSize":"xx-large"} -->
+			<h2 class="wp-block-heading is-style-condensed has-xx-large-font-size"><?php esc_html_e( 'Entry title', 'weingart' ); ?></h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"fontSize":"small"} -->
+			<p class="has-small-font-size"><?php esc_html_e( 'Replace with a one-line summary of this entry.', 'weingart' ); ?></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"25%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:25%">
+			<!-- wp:paragraph {"className":"is-style-caption"} -->
+			<p class="is-style-caption"><?php esc_html_e( 'Category', 'weingart' ); ?></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+
+	<!-- wp:separator {"className":"is-style-wide","align":"wide"} -->
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide"/>
+	<!-- /wp:separator -->
+
+	<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center">
+		<!-- wp:column {"verticalAlignment":"center","width":"22%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:22%">
+			<!-- wp:paragraph {"className":"is-style-numeral","fontSize":"display"} -->
+			<p class="is-style-numeral has-display-font-size">03</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"53%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:53%">
+			<!-- wp:heading {"level":2,"className":"is-style-condensed","fontSize":"xx-large"} -->
+			<h2 class="wp-block-heading is-style-condensed has-xx-large-font-size"><?php esc_html_e( 'Entry title', 'weingart' ); ?></h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"fontSize":"small"} -->
+			<p class="has-small-font-size"><?php esc_html_e( 'Replace with a one-line summary of this entry.', 'weingart' ); ?></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"25%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:25%">
+			<!-- wp:paragraph {"className":"is-style-caption"} -->
+			<p class="is-style-caption"><?php esc_html_e( 'Category', 'weingart' ); ?></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+
+	<!-- wp:separator {"className":"is-style-wide","align":"wide"} -->
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide"/>
+	<!-- /wp:separator -->
+
+	<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center">
+		<!-- wp:column {"verticalAlignment":"center","width":"22%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:22%">
+			<!-- wp:paragraph {"className":"is-style-numeral","fontSize":"display"} -->
+			<p class="is-style-numeral has-display-font-size">04</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"53%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:53%">
+			<!-- wp:heading {"level":2,"className":"is-style-condensed","fontSize":"xx-large"} -->
+			<h2 class="wp-block-heading is-style-condensed has-xx-large-font-size"><?php esc_html_e( 'Entry title', 'weingart' ); ?></h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"fontSize":"small"} -->
+			<p class="has-small-font-size"><?php esc_html_e( 'Replace with a one-line summary of this entry.', 'weingart' ); ?></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"25%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:25%">
+			<!-- wp:paragraph {"className":"is-style-caption"} -->
+			<p class="is-style-caption"><?php esc_html_e( 'Category', 'weingart' ); ?></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+
+	<!-- wp:separator {"className":"is-style-wide","align":"wide"} -->
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide"/>
+	<!-- /wp:separator -->
+
+	<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+	<div class="wp-block-columns alignwide are-vertically-aligned-center">
+		<!-- wp:column {"verticalAlignment":"center","width":"22%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:22%">
+			<!-- wp:paragraph {"className":"is-style-numeral","fontSize":"display"} -->
+			<p class="is-style-numeral has-display-font-size">05</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"53%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:53%">
+			<!-- wp:heading {"level":2,"className":"is-style-condensed","fontSize":"xx-large"} -->
+			<h2 class="wp-block-heading is-style-condensed has-xx-large-font-size"><?php esc_html_e( 'Entry title', 'weingart' ); ?></h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"fontSize":"small"} -->
+			<p class="has-small-font-size"><?php esc_html_e( 'Replace with a one-line summary of this entry.', 'weingart' ); ?></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"verticalAlignment":"center","width":"25%"} -->
+		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:25%">
+			<!-- wp:paragraph {"className":"is-style-caption"} -->
+			<p class="is-style-caption"><?php esc_html_e( 'Category', 'weingart' ); ?></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
+
+	<!-- wp:separator {"className":"is-style-wide","align":"wide"} -->
+	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-wide"/>
+	<!-- /wp:separator -->
 </div>
 <!-- /wp:group -->
