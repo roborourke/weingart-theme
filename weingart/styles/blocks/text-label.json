@@ -3,7 +3,7 @@
 	"version": 3,
 	"title": "Label",
 	"slug": "label",
-	"blockTypes": [ "core/paragraph" ],
+	"blockTypes": [ "core/paragraph", "core/heading" ],
 	"styles": {
 		"typography": {
 			"fontFamily": "var:preset|font-family|mono",

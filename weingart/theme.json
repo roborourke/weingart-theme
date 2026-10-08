@@ -269,6 +269,9 @@
 		},
 		"css": "html{scroll-padding-top:var(--wp--preset--spacing--40)}@media (prefers-reduced-motion:no-preference){a,.wp-element-button{transition:background-color .15s linear,color .15s linear}}"
 	},
+	"customTemplates": [
+		{ "name": "front-stepped", "title": "Front page with stepped hero", "postTypes": [ "page" ] }
+	],
 	"templateParts": [
 		{ "name": "header", "title": "Header", "area": "header" },
 		{ "name": "footer", "title": "Footer", "area": "footer" }

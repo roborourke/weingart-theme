@@ -14,7 +14,7 @@ npx @wp-playground/cli@3.1.57 server --mount=./weingart:/wordpress/wp-content/th
 
 Open http://127.0.0.1:9420. The blueprint activates the theme, turns on `WP_DEBUG` display, sets pretty permalinks and creates demo content:
 
-- `/` is a page called Index. The theme's `front-page` template adds the stepped hero; the page body holds the index, overprint poster, post grid and halftone quote.
+- `/` is a page called Index. It uses the "Front page with stepped hero" page template, which adds the hero; the page body holds the index, overprint poster, post grid and halftone quote. If Settings > Reading shows latest posts instead, the front page is the plain journal list.
 - `/journal/` is the posts page (eight posts in five categories).
 - `/about/` shows the type specimen.
 - `/category/process/`, `/?s=type` and any missing URL show the archive, search and 404 templates.
@@ -36,7 +36,7 @@ weingart/
   patterns/             weingart/stepped-hero, index-list, overprint-poster, halftone-quote,
                         specimen, post-grid, archive-loop, colophon
   parts/                header, footer
-  templates/            index, home, front-page, single, page, archive, search, 404
+  templates/            index, front-stepped (page template), single, page, archive, search, 404
 ```
 
 ### Design devices
