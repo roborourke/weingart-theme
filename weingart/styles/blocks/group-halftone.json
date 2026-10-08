@@ -5,7 +5,7 @@
 	"slug": "halftone",
 	"blockTypes": [ "core/group" ],
 	"styles": {
-		"color": { "text": "var:preset|color|ink" },
+		"color": { "text": "var:preset|color|contrast" },
 		"spacing": { "padding": { "top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60" } }
 	}
 }

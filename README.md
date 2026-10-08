@@ -55,12 +55,12 @@ weingart/
 
 ### Style variations
 
-- **Basel red** replaces the cyan film with red.
+- **Basel red** swaps `accent-1` (the cyan film) for a red that keeps ink text at 4.5:1 or more. It lists the full palette, because a variation palette replaces the theme palette.
 - **Negative** turns the page to ink and the type to paper, and switches the overprint blend to `screen`.
 
 ## Colour and contrast
 
-Magenta and red are slightly adjusted from the original brief so text passes WCAG AA. Ink on magenta is 4.6:1. Paper on red is 4.5:1. Cyan and yellow are only used as grounds with ink text. Grey `#8a8a8a` is for rules, large type and dark grounds; `grey-dark` is for small text on paper (4.7:1).
+Magenta and red are slightly adjusted from the original brief so text passes WCAG AA. Ink on magenta is 4.6:1. Paper on red is 4.5:1. Cyan and yellow are only used as grounds with ink text. Palette slugs are semantic: `base` (paper), `contrast` (ink), `accent-1` to `accent-4` (cyan, magenta, yellow, red), `muted` and `muted-strong`. Grey `muted` `#8a8a8a` is for rules, large type and dark grounds; `muted-strong` is for small text on paper (4.7:1).
 
 ## Fonts
 

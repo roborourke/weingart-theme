@@ -5,7 +5,7 @@
 	"slug": "caption",
 	"blockTypes": [ "core/paragraph" ],
 	"styles": {
-		"color": { "text": "var:preset|color|grey-dark" },
+		"color": { "text": "var:preset|color|muted-strong" },
 		"typography": {
 			"fontFamily": "var:preset|font-family|mono",
 			"fontSize": "var:preset|font-size|x-small",

@@ -5,19 +5,26 @@
 	"settings": {
 		"color": {
 			"palette": [
-				{ "slug": "cyan", "name": "Basel red (replaces cyan film)", "color": "#dc0613" }
+				{ "slug": "base", "name": "Paper", "color": "#f3f0e8" },
+				{ "slug": "contrast", "name": "Ink", "color": "#111111" },
+				{ "slug": "accent-1", "name": "Basel red film (replaces cyan)", "color": "#e8402a" },
+				{ "slug": "accent-2", "name": "Magenta film", "color": "#ee1a8c" },
+				{ "slug": "accent-3", "name": "Yellow film", "color": "#ffe500" },
+				{ "slug": "accent-4", "name": "Basel red", "color": "#dc0613" },
+				{ "slug": "muted", "name": "Grey (large type, rules, dark grounds)", "color": "#8a8a8a" },
+				{ "slug": "muted-strong", "name": "Grey (small type on paper)", "color": "#6b6b6b" }
 			]
 		}
 	},
 	"styles": {
 		"elements": {
 			"button": {
-				"color": { "background": "var:preset|color|red", "text": "var:preset|color|paper" }
+				"color": { "background": "var:preset|color|accent-4", "text": "var:preset|color|base" }
 			}
 		},
 		"blocks": {
 			"core/quote": {
-				"border": { "left": { "color": "var:preset|color|red", "style": "solid", "width": "0.5rem" } }
+				"border": { "left": { "color": "var:preset|color|accent-4", "style": "solid", "width": "0.5rem" } }
 			}
 		}
 	}

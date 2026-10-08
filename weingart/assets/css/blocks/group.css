@@ -25,10 +25,10 @@
 /* Halftone: a dot screen that fades out towards the bottom. */
 .wp-block-group.is-style-halftone {
 	background-image:
-		linear-gradient(to bottom, transparent 0%, var(--wp--preset--color--paper) 100%),
-		radial-gradient(circle at center, var(--wp--preset--color--ink) 0.14rem, transparent 0.17rem);
+		linear-gradient(to bottom, transparent 0%, var(--wp--preset--color--base) 100%),
+		radial-gradient(circle at center, var(--wp--preset--color--contrast) 0.14rem, transparent 0.17rem);
 	background-size: 100% 100%, 0.5rem 0.5rem;
-	background-color: var(--wp--preset--color--paper);
+	background-color: var(--wp--preset--color--base);
 }
 
 /* Registration: crop marks at the corners and a register target above. */

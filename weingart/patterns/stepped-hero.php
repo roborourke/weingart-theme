@@ -61,8 +61,8 @@
 			</div>
 			<!-- /wp:buttons -->
 
-			<!-- wp:group {"className":"is-style-wedge","style":{"dimensions":{"minHeight":"8rem"}},"backgroundColor":"yellow","layout":{"type":"constrained","contentSize":"8rem","justifyContent":"left"}} -->
-			<div class="wp-block-group is-style-wedge has-yellow-background-color has-background" style="min-height:8rem"></div>
+			<!-- wp:group {"className":"is-style-wedge","style":{"dimensions":{"minHeight":"8rem"}},"backgroundColor":"accent-3","layout":{"type":"constrained","contentSize":"8rem","justifyContent":"left"}} -->
+			<div class="wp-block-group is-style-wedge has-accent-3-background-color has-background" style="min-height:8rem"></div>
 			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->

@@ -21,12 +21,12 @@ $weingart_scale = array(
 );
 
 $weingart_palette = array(
-	array( 'paper', __( 'Paper', 'weingart' ), 'ink' ),
-	array( 'ink', __( 'Ink', 'weingart' ), 'paper' ),
-	array( 'cyan', __( 'Cyan film', 'weingart' ), 'ink' ),
-	array( 'magenta', __( 'Magenta film', 'weingart' ), 'ink' ),
-	array( 'yellow', __( 'Yellow film', 'weingart' ), 'ink' ),
-	array( 'red', __( 'Basel red', 'weingart' ), 'paper' ),
+	array( 'base', __( 'Paper', 'weingart' ), 'contrast' ),
+	array( 'contrast', __( 'Ink', 'weingart' ), 'base' ),
+	array( 'accent-1', __( 'Cyan film', 'weingart' ), 'contrast' ),
+	array( 'accent-2', __( 'Magenta film', 'weingart' ), 'contrast' ),
+	array( 'accent-3', __( 'Yellow film', 'weingart' ), 'contrast' ),
+	array( 'accent-4', __( 'Basel red', 'weingart' ), 'base' ),
 );
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
@@ -102,8 +102,8 @@ $weingart_palette = array(
 <?php foreach ( $weingart_palette as $weingart_swatch ) : ?>
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"style":{"dimensions":{"minHeight":"9rem"},"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}},"border":{"width":"1px","style":"solid"}},"borderColor":"ink","backgroundColor":"<?php echo esc_attr( $weingart_swatch[0] ); ?>","textColor":"<?php echo esc_attr( $weingart_swatch[2] ); ?>","layout":{"type":"flex","orientation":"vertical","verticalAlignment":"bottom"}} -->
-			<div class="wp-block-group has-border-color has-ink-border-color has-<?php echo esc_attr( $weingart_swatch[2] ); ?>-color has-<?php echo esc_attr( $weingart_swatch[0] ); ?>-background-color has-text-color has-background" style="border-style:solid;border-width:1px;min-height:9rem;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">
+			<!-- wp:group {"style":{"dimensions":{"minHeight":"9rem"},"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"}},"border":{"width":"1px","style":"solid"}},"borderColor":"contrast","backgroundColor":"<?php echo esc_attr( $weingart_swatch[0] ); ?>","textColor":"<?php echo esc_attr( $weingart_swatch[2] ); ?>","layout":{"type":"flex","orientation":"vertical","verticalAlignment":"bottom"}} -->
+			<div class="wp-block-group has-border-color has-contrast-border-color has-<?php echo esc_attr( $weingart_swatch[2] ); ?>-color has-<?php echo esc_attr( $weingart_swatch[0] ); ?>-background-color has-text-color has-background" style="border-style:solid;border-width:1px;min-height:9rem;padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">
 				<!-- wp:paragraph {"className":"is-style-label"} -->
 				<p class="is-style-label"><?php echo esc_html( $weingart_swatch[1] ); ?></p>
 				<!-- /wp:paragraph -->
