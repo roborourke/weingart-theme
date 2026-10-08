@@ -132,3 +132,10 @@ What the skill would have prevented:
 - Dead in-page anchors, comments in `single`, and generated-content numerals read aloud.
 
 Commits: the brief's trailer (`Claude Opus 5.5 (1M context)`) differs from the harness line, which named Sonnet 5.5. This pass used the brief's trailer. Two commits in the middle of the series mix structure and i18n files because a failed `git add` left earlier staged moves behind; the commit bodies say which commit carries which part.
+
+## Fixes, 2026-10-08
+
+- Patterns: `foreach` loops and their PHP arrays removed from `index-list`, `overprint-poster` and `specimen`. Poster and specimen render byte for byte as before (checked by rendering the old and new files with stubbed escaping functions and diffing). The index rows now read as example content ("Entry title", "Replace with a one-line summary of this entry.", "Category"). Rule: pattern markup is frozen at insert time, so no loops or runtime-derived data in pattern files.
+- Poster words: the collision was not specific to Basel red or Negative. The overprint group was capped at the 44rem content width, so each plate had about 160px for a word up to 2.9em wide at display size. Negative only looked clipped because ink text on a screen-blend plate vanishes over the ink page once it leaves the plate. Fix: the overprint group is `align: wide`; from 60rem each plate is a size container and its heading is `min(display, 32cqi)`. The plate headings no longer carry `has-display-font-size`, because core emits that class with `!important`. A page that already holds the old pattern (the seeded front page) keeps the old markup until the pattern is inserted again.
+- Journal grid: `archive-loop` now uses the registered `stepped` post-template style in three columns, with x-large titles, so the journal, category and search lists step like the front-page post grid. Below 48rem it is one column with the staircase indent.
+- Footer focus: the Ink section style sets the link focus outline to `base` (paper on ink, about 16:1), like its buttons.
