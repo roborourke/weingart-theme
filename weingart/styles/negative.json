@@ -16,6 +16,11 @@
 			}
 		},
 		"blocks": {
+			"core/paragraph": {
+				"variations": {
+					"caption": { "color": { "text": "var:preset|color|muted" } }
+				}
+			},
 			"core/separator": {
 				"color": { "text": "var:preset|color|base" }
 			}

@@ -6,6 +6,7 @@
 	"blockTypes": [ "core/group" ],
 	"styles": {
 		"color": { "text": "var:preset|color|contrast" },
-		"spacing": { "padding": { "top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60" } }
+		"spacing": { "padding": { "top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60" } },
+		"css": "& .is-style-caption{color:var(--wp--preset--color--muted-strong)}"
 	}
 }

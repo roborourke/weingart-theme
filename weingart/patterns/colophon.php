@@ -38,12 +38,12 @@
 
 		<!-- wp:column {"width":"45%"} -->
 		<div class="wp-block-column" style="flex-basis:45%">
-			<!-- wp:paragraph {"className":"is-style-caption","textColor":"muted"} -->
-			<p class="is-style-caption has-muted-color has-text-color"><?php esc_html_e( 'Set in Archivo and IBM Plex Mono, both under the SIL Open Font License. Three process colours, printed as film.', 'weingart' ); ?></p>
+			<!-- wp:paragraph {"className":"is-style-caption"} -->
+			<p class="is-style-caption"><?php esc_html_e( 'Set in Archivo and IBM Plex Mono, both under the SIL Open Font License. Three process colours, printed as film.', 'weingart' ); ?></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:paragraph {"className":"is-style-caption","textColor":"muted"} -->
-			<p class="is-style-caption has-muted-color has-text-color"><a href="#"><?php esc_html_e( 'Back to top', 'weingart' ); ?></a></p>
+			<!-- wp:paragraph {"className":"is-style-caption"} -->
+			<p class="is-style-caption"><a href="#"><?php esc_html_e( 'Back to top', 'weingart' ); ?></a></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
