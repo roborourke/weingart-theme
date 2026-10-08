@@ -6,7 +6,7 @@ Requires WordPress 6.6+, tested on 7.1. PHP 7.4+.
 
 ## Run it in Playground
 
-You need Node 20.18 or newer. From this folder:
+You need Node 20.18 or newer (the pinned CLI warns it prefers Node 24.18; it ran on 24.15). From this folder:
 
 ```
 npx @wp-playground/cli@3.1.57 server --mount=./weingart:/wordpress/wp-content/themes/weingart --blueprint=./blueprint.json --port=9420

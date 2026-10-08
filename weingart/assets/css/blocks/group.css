@@ -1,8 +1,6 @@
 /* Overprint: children print over each other like film layers. */
 .wp-block-group.is-style-overprint {
 	isolation: isolate;
-	flex-wrap: nowrap;
-	gap: 0;
 }
 
 .wp-block-group.is-style-overprint > * {

@@ -20,7 +20,7 @@ $weingart_plates = array(
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
 	<!-- wp:group {"align":"wide","className":"is-style-registration","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide is-style-registration">
-		<!-- wp:group {"className":"is-style-overprint","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+		<!-- wp:group {"className":"is-style-overprint","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 		<div class="wp-block-group is-style-overprint">
 <?php foreach ( $weingart_plates as $weingart_plate ) : ?>
 			<!-- wp:group {"style":{"dimensions":{"minHeight":"28rem"},"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"backgroundColor":"<?php echo esc_attr( $weingart_plate[0] ); ?>","textColor":"ink","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->

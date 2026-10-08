@@ -45,7 +45,7 @@ Queries: `presets literals theme.json`, `fluid type spacing`, `pattern ids urls 
 
 What it made me do differently:
 - All type sizes and spacing are fluid presets. Spacing steps 50, 60, 70 have min values at 25 percent of max so the stepped headline keeps equal steps on mobile.
-- No `!important`, no `.editor-styles-wrapper`, no hex or px font sizes outside `theme.json` settings. All colours in CSS go through `var(--wp--preset--color--*)`. Dots in the halftone use `color-mix()` on a preset, which passes `literal-colors`.
+- No `!important`, no `.editor-styles-wrapper`, no hex or px font sizes outside `theme.json` settings. All colours in CSS go through `var(--wp--preset--color--*)`. The halftone dots use `var(--wp--preset--color--ink)`, so `literal-colors` stays quiet.
 - Link, button and focus states are in `styles.elements` (`:hover`, `:focus-visible`). I checked the generated CSS: focus outlines are emitted for links and buttons.
 - Reduced motion: the only transition is wrapped in `@media (prefers-reduced-motion: no-preference)`.
 - Fonts: self-hosted woff2 through `fontFace`, as the brief asked.
@@ -86,6 +86,10 @@ Decisions with ids are above. Open questions for Rob:
 - No check or guidance for Playground verification of a theme. The skill had no hit for "playground blueprint demo content". I used the `blueprint` and `wp-playground` skills.
 
 ## Process notes
+
+- Self-review caught two defects that no check in the skill covers (both are `accessibility-baseline`, `must`): a doubled `<header>` landmark (the template-part call and the part's root group both set `tagName` to `header`) and a skipped heading level (h1 then h3). `accessibility-baseline` lists heading levels in its review check but marks them as the official checklist's job, and `check-theme.mjs` has no landmark or heading-order check. Both are cheap to detect with a regex over templates and patterns.
+- The Playground server was stopped with `pkill -f wp-playground`, not by PID: `npx` is a wrapper and the real node child has a different PID. `pgrep -f wp-playground` and `lsof -i :9420` were empty afterwards.
+- Commit bodies in this repo are hard-wrapped at about 72 columns. The global rule is one line per paragraph. I did not rewrite history.
 
 - Commit trailer: the brief said `Claude Opus 5.5 (1M context)`; the harness said `Claude Sonnet 5.5`, which is the model that did the work. Commits use the Sonnet line.
 - Search output is one line of JSON per result list. `cut` on it breaks it. A `--ids` flag or text output would help when scanning.

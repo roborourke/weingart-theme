@@ -41,8 +41,8 @@ $weingart_rows = array(
 
 		<!-- wp:column {"verticalAlignment":"center","width":"53%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:53%">
-			<!-- wp:heading {"level":3,"className":"is-style-condensed","fontSize":"xx-large"} -->
-			<h3 class="wp-block-heading is-style-condensed has-xx-large-font-size"><?php echo esc_html( $weingart_row[1] ); ?></h3>
+			<!-- wp:heading {"level":2,"className":"is-style-condensed","fontSize":"xx-large"} -->
+			<h2 class="wp-block-heading is-style-condensed has-xx-large-font-size"><?php echo esc_html( $weingart_row[1] ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"small"} -->
