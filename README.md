@@ -73,3 +73,7 @@ node <block-theme-principles>/scripts/check-theme.mjs weingart --wp 7.1
 ```
 
 See `SKILL-NOTES.md` for how the `block-theme-principles` skill shaped the build.
+
+## Licence
+
+The theme is GPL-2.0-or-later (see `LICENSE`). The bundled fonts are under the SIL Open Font License 1.1; their licence texts are in `weingart/assets/fonts/`.

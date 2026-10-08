@@ -97,7 +97,7 @@ Decisions with ids are above. Open questions for Rob:
 ## Final `check-theme.mjs` output
 
 ```
-$ node scripts/check-theme.mjs /Users/rob/Work/weingart-theme/weingart --wp 7.1
+$ node scripts/check-theme.mjs weingart --wp 7.1
 0 error(s), 0 warning(s), 0 info; 0 allowed.
 exit 0
 ```
