@@ -3,7 +3,7 @@
   "meta": {
     "title": "Weingart block theme",
     "author": "Rob O'Rourke",
-    "description": "A block theme after Wolfgang Weingart's typography, with demo content. Run with the theme folder mounted at /wordpress/wp-content/themes/weingart."
+    "description": "A block theme after Wolfgang Weingart's typography, with demo content. Run with the repo root mounted at /wordpress/wp-content/themes/weingart."
   },
   "landingPage": "/",
   "preferredVersions": {

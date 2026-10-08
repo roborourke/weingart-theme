@@ -4,13 +4,26 @@ A WordPress block theme after the typography of Wolfgang Weingart (*Typography: 
 
 Requires WordPress 6.6+, tested on 7.1. PHP 7.4+.
 
+## Install
+
+This repo is the theme. Either clone it into your themes folder:
+
+```
+cd wp-content/themes
+git clone https://github.com/roborourke/weingart-theme.git weingart
+```
+
+Or download the ZIP from GitHub and upload it under Appearance > Themes > Add New Theme > Upload Theme. Then activate Weingart.
+
 ## Run it in Playground
 
-You need Node 20.18 or newer (the pinned CLI warns it prefers Node 24.18; it ran on 24.15). From this folder:
+You need Node 20.18 or newer (the pinned CLI warns it prefers Node 24.18; it ran on 24.15). From the repo root:
 
 ```
-npx @wp-playground/cli@3.1.57 server --mount=./weingart:/wordpress/wp-content/themes/weingart --blueprint=./blueprint.json --port=9420
+npx @wp-playground/cli@3.1.57 server --mount=.:/wordpress/wp-content/themes/weingart --blueprint=./blueprint.json --port=9420
 ```
+
+The mount includes the `.git` folder. That is harmless.
 
 Open http://127.0.0.1:9420. The blueprint activates the theme, turns on `WP_DEBUG` display, sets pretty permalinks and creates demo content:
 
@@ -21,12 +34,13 @@ Open http://127.0.0.1:9420. The blueprint activates the theme, turns on `WP_DEBU
 
 Stop the server with Ctrl+C. If you started it in the background, kill its PID and check `pgrep -f wp-playground` returns nothing.
 
-The theme folder is mounted, so edits to templates, patterns and CSS show on reload. Edits to the blueprint need a restart.
+The repo root is mounted, so edits to templates, patterns and CSS show on reload. Edits to the blueprint need a restart.
 
 ## What is in the theme
 
 ```
-weingart/
+./
+  style.css             theme header: name, version, requirements
   theme.json            tokens: palette, fluid type and spacing, fonts, element styles
   functions.php         pattern category, PHP block styles, per-block CSS loading
   styles/               style variations: basel-red, negative
@@ -37,6 +51,9 @@ weingart/
                         specimen, post-grid, archive-loop, colophon
   parts/                header, footer
   templates/            index, front-stepped (page template), single, page, archive, search, 404
+  screenshot.png        theme thumbnail for Appearance > Themes
+  docs/                 build notes, evaluation and screenshots (left out of ZIP downloads)
+  blueprint.json        Playground blueprint with demo content (left out of ZIP downloads)
 ```
 
 ### Design devices
@@ -64,16 +81,16 @@ Magenta and red are slightly adjusted from the original brief so text passes WCA
 
 ## Fonts
 
-Self-hosted woff2 from the `@fontsource-variable/archivo@5.3.0` and `@fontsource/ibm-plex-mono@5.3.0` packages (Latin subset; Archivo also has Latin Extended). Both are under the SIL Open Font License 1.1. The licence texts are in `weingart/assets/fonts/`. Nothing loads from a font CDN at runtime.
+Self-hosted woff2 from the `@fontsource-variable/archivo@5.3.0` and `@fontsource/ibm-plex-mono@5.3.0` packages (Latin subset; Archivo also has Latin Extended). Both are under the SIL Open Font License 1.1. The licence texts are in `assets/fonts/`. Nothing loads from a font CDN at runtime.
 
 ## Checks
 
 ```
-node <block-theme-principles>/scripts/check-theme.mjs weingart --wp 7.1
+node <block-theme-principles>/scripts/check-theme.mjs . --wp 7.1
 ```
 
-See `SKILL-NOTES.md` for how the `block-theme-principles` skill shaped the build.
+Run it from the repo root. See `docs/SKILL-NOTES.md` for how the `block-theme-principles` skill shaped the build.
 
 ## Licence
 
-The theme is GPL-2.0-or-later (see `LICENSE`). The bundled fonts are under the SIL Open Font License 1.1; their licence texts are in `weingart/assets/fonts/`.
+The theme is GPL-2.0-or-later (see `LICENSE`). The bundled fonts are under the SIL Open Font License 1.1; their licence texts are in `assets/fonts/`.
