@@ -144,7 +144,7 @@
 					"color": { "background": "var:preset|color|accent-3", "text": "var:preset|color|contrast" }
 				},
 				":focus-visible": {
-					"outline": { "color": "currentColor", "offset": "3px", "style": "solid", "width": "3px" }
+					"outline": { "color": "var:preset|color|contrast", "offset": "3px", "style": "solid", "width": "3px" }
 				}
 			},
 			"heading": {
