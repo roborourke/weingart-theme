@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Numeral",
+	"slug": "numeral",
+	"blockTypes": [ "core/paragraph" ],
+	"styles": {
+		"typography": {
+			"fontFamily": "var:preset|font-family|mono",
+			"fontSize": "var:preset|font-size|giant",
+			"fontWeight": "700",
+			"lineHeight": "0.8",
+			"letterSpacing": "-0.06em"
+		}
+	}
+}

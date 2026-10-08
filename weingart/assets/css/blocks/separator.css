@@ -1,0 +1,16 @@
+.wp-block-separator.is-style-rule-heavy,
+.wp-block-separator.is-style-rule-short {
+	height: 0.75rem;
+	border: 0;
+	background-color: currentColor;
+	opacity: 1;
+}
+
+.wp-block-separator.is-style-rule-heavy {
+	width: 100%;
+	max-width: none;
+}
+
+.wp-block-separator.is-style-rule-short {
+	width: var(--wp--preset--spacing--60);
+}

@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Basel red",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "cyan", "name": "Basel red (replaces cyan film)", "color": "#dc0613" }
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"button": {
+				"color": { "background": "var:preset|color|red", "text": "var:preset|color|paper" }
+			}
+		},
+		"blocks": {
+			"core/quote": {
+				"border": { "left": { "color": "var:preset|color|red", "style": "solid", "width": "0.5rem" } }
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Halftone",
+	"slug": "halftone",
+	"blockTypes": [ "core/group" ],
+	"styles": {
+		"color": { "text": "var:preset|color|ink" },
+		"spacing": { "padding": { "top": "var:preset|spacing|60", "bottom": "var:preset|spacing|60" } }
+	}
+}

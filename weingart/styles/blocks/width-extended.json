@@ -1,0 +1,11 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Extended",
+	"slug": "extended",
+	"blockTypes": [ "core/heading", "core/paragraph", "core/post-title", "core/query-title" ],
+	"styles": {
+		"typography": { "fontWeight": "200", "lineHeight": "0.95", "letterSpacing": "-0.02em" },
+		"css": "font-stretch:125%;"
+	}
+}

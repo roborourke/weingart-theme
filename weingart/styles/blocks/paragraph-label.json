@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Label",
+	"slug": "label",
+	"blockTypes": [ "core/paragraph" ],
+	"styles": {
+		"typography": {
+			"fontFamily": "var:preset|font-family|mono",
+			"fontSize": "var:preset|font-size|x-small",
+			"fontWeight": "700",
+			"letterSpacing": "0.18em",
+			"lineHeight": "1.4",
+			"textTransform": "uppercase"
+		}
+	}
+}

@@ -1,0 +1,77 @@
+/* Overprint: children print over each other like film layers. */
+.wp-block-group.is-style-overprint {
+	isolation: isolate;
+	flex-wrap: nowrap;
+	gap: 0;
+}
+
+.wp-block-group.is-style-overprint > * {
+	mix-blend-mode: var(--wp--custom--film-blend, multiply);
+}
+
+.wp-block-group.is-style-overprint > * + * {
+	margin-inline-start: calc(var(--wp--preset--spacing--60) * -1);
+}
+
+@media (max-width: 40rem) {
+	.wp-block-group.is-style-overprint {
+		flex-direction: column;
+	}
+
+	.wp-block-group.is-style-overprint > * + * {
+		margin-inline-start: 0;
+		margin-block-start: calc(var(--wp--preset--spacing--60) * -1);
+	}
+}
+
+/* Halftone: a dot screen that fades out towards the bottom. */
+.wp-block-group.is-style-halftone {
+	background-image:
+		linear-gradient(to bottom, transparent 0%, var(--wp--preset--color--paper) 100%),
+		radial-gradient(circle at center, var(--wp--preset--color--ink) 0.14rem, transparent 0.17rem);
+	background-size: 100% 100%, 0.5rem 0.5rem;
+	background-color: var(--wp--preset--color--paper);
+}
+
+/* Registration: crop marks at the corners and a register target above. */
+.wp-block-group.is-style-registration {
+	position: relative;
+}
+
+.wp-block-group.is-style-registration::before,
+.wp-block-group.is-style-registration::after {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+}
+
+.wp-block-group.is-style-registration::before {
+	inset: calc(var(--wp--preset--spacing--30) * -1);
+	background:
+		linear-gradient(currentColor, currentColor) top left / 1rem 1px no-repeat,
+		linear-gradient(currentColor, currentColor) top left / 1px 1rem no-repeat,
+		linear-gradient(currentColor, currentColor) top right / 1rem 1px no-repeat,
+		linear-gradient(currentColor, currentColor) top right / 1px 1rem no-repeat,
+		linear-gradient(currentColor, currentColor) bottom left / 1rem 1px no-repeat,
+		linear-gradient(currentColor, currentColor) bottom left / 1px 1rem no-repeat,
+		linear-gradient(currentColor, currentColor) bottom right / 1rem 1px no-repeat,
+		linear-gradient(currentColor, currentColor) bottom right / 1px 1rem no-repeat;
+}
+
+.wp-block-group.is-style-registration::after {
+	top: calc(var(--wp--preset--spacing--40) * -1);
+	left: 50%;
+	width: 1.25rem;
+	height: 1.25rem;
+	translate: -50% 0;
+	border-radius: 50%;
+	background:
+		linear-gradient(currentColor, currentColor) center / 1px 100% no-repeat,
+		linear-gradient(currentColor, currentColor) center / 100% 1px no-repeat;
+	box-shadow: inset 0 0 0 1px currentColor;
+}
+
+/* Wedge: a right-angled triangle for accents. */
+.wp-block-group.is-style-wedge {
+	clip-path: polygon(0 0, 100% 100%, 0 100%);
+}

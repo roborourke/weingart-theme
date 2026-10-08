@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Ink",
+	"slug": "ink",
+	"blockTypes": [ "core/group" ],
+	"styles": {
+		"color": { "background": "var:preset|color|ink", "text": "var:preset|color|paper" },
+		"spacing": { "padding": { "top": "var:preset|spacing|50", "bottom": "var:preset|spacing|50" } },
+		"elements": {
+			"button": {
+				"color": { "background": "var:preset|color|paper", "text": "var:preset|color|ink" }
+			}
+		}
+	}
+}

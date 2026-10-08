@@ -1,0 +1,19 @@
+/* Indexed: numbers each post 01, 02, 03 in large mono type. */
+.wp-block-post-template.is-style-indexed {
+	counter-reset: weingart-index;
+}
+
+.wp-block-post-template.is-style-indexed > li {
+	counter-increment: weingart-index;
+}
+
+.wp-block-post-template.is-style-indexed > li::before {
+	content: counter(weingart-index, decimal-leading-zero);
+	display: block;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--display);
+	font-weight: 700;
+	line-height: 0.8;
+	letter-spacing: -0.06em;
+	margin-block-end: var(--wp--preset--spacing--20);
+}

@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Negative",
+	"settings": {
+		"custom": { "film-blend": "screen" }
+	},
+	"styles": {
+		"color": {
+			"background": "var:preset|color|ink",
+			"text": "var:preset|color|paper"
+		},
+		"elements": {
+			"button": {
+				"color": { "background": "var:preset|color|paper", "text": "var:preset|color|ink" }
+			}
+		},
+		"blocks": {
+			"core/separator": {
+				"color": { "text": "var:preset|color|paper" }
+			}
+		}
+	}
+}
