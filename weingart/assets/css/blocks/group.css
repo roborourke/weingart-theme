@@ -23,6 +23,22 @@
 	padding-inline-end: calc(var(--weingart-plate-pad) + var(--weingart-overlap));
 }
 
+.wp-block-group.is-style-overprint > * > .wp-block-heading {
+	font-size: var(--wp--preset--font-size--display);
+}
+
+/* Wide screens: each plate is a size container and its heading scales to it, so the
+   longest word fits the plate at any width. */
+@media (width > 60rem) {
+	.wp-block-group.is-style-overprint > * {
+		container-type: inline-size;
+	}
+
+	.wp-block-group.is-style-overprint > * > .wp-block-heading {
+		font-size: min(var(--wp--preset--font-size--display), 32cqi);
+	}
+}
+
 /* Narrow screens: the plates stack as a staircase, each one step further in. */
 @media (max-width: 60rem) {
 	.wp-block-group.is-style-overprint {
