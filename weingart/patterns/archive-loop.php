@@ -2,7 +2,7 @@
 /**
  * Title: Archive loop
  * Slug: weingart/archive-loop
- * Description: The main query as a two-column numbered list with pagination. Used by the index, home, archive and search templates.
+ * Description: The main query as a two-column numbered list with pagination. Used by the index, archive and search templates.
  * Categories: weingart, query
  * Keywords: archive, posts, list, pagination
  * Viewport Width: 1400

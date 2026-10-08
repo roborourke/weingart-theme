@@ -13,9 +13,9 @@
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
-	<!-- wp:paragraph {"className":"is-style-label","align":"wide"} -->
-	<p class="alignwide is-style-label"><?php esc_html_e( 'Journal / Latest entries', 'weingart' ); ?></p>
-	<!-- /wp:paragraph -->
+	<!-- wp:heading {"level":2,"className":"is-style-label","align":"wide"} -->
+	<h2 class="wp-block-heading alignwide is-style-label"><?php esc_html_e( 'Journal / Latest entries', 'weingart' ); ?></h2>
+	<!-- /wp:heading -->
 
 	<!-- wp:separator {"className":"is-style-rule-heavy","align":"wide"} -->
 	<hr class="wp-block-separator alignwide has-alpha-channel-opacity is-style-rule-heavy"/>

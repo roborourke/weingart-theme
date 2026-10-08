@@ -18,8 +18,8 @@ $weingart_rows = array(
 	array( '05', __( 'Hand', 'weingart' ), __( 'Pencil, scalpel, photostat. Proofs that kept their glue marks.', 'weingart' ), __( 'Craft', 'weingart' ) ),
 );
 ?>
-<!-- wp:group {"anchor":"index","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
-<div id="index" class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
 	<!-- wp:paragraph {"className":"is-style-label","align":"wide"} -->
 	<p class="alignwide is-style-label"><?php esc_html_e( 'Contents', 'weingart' ); ?></p>
 	<!-- /wp:paragraph -->
