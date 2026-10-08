@@ -103,3 +103,32 @@ exit 0
 ```
 
 No allow-list (`.block-theme-principles.json`) is used.
+
+## Fixes
+
+A second pass fixed the issues in `EVALUATION.md` and the browser QA. Nothing was changed in the skill itself. Fixes by commit topic:
+
+- Palette slugs renamed to `base`, `contrast`, `accent-1` to `accent-4`, `muted`, `muted-strong`. `basel-red.json` now lists all eight entries, because a variation palette replaces the theme palette. Its `accent-1` is #e8402a, not #dc0613: ink on #dc0613 is 3.67:1 and film sections and poster plates carry ink text. No red passes with both ink and paper text, so the original red stays as `accent-4` for paper-on-red buttons.
+- Contrast: captions and separators in the Ink section, colophon, film sections and the Negative variation. The first attempt put caption colours in nested `css` in the section partials. It lost to the per-instance `:root :where(p.is-style-caption--N)` rule, which has the same specificity and prints later. The fix is a per-block `paragraph.css` with two-class selectors. The rendered global styles were the only way to see this without a browser.
+- No small text used `muted` on paper, so the 12px grey label finding did not reproduce in this theme. The palette name now says where `muted` is allowed.
+- Focus: button outlines no longer use `currentColor`. Root buttons use `contrast`; the Ink section and Negative use `base`; paper, film and halftone sections restate it so it holds under Negative.
+- Structure: `front-page.html` became the custom page template `front-stepped` (a posts front page now falls through to `index.html`), `home.html` was removed as a duplicate of `index.html`, the `#index` anchor moved to a wrapper in the template, the post grid label became an h2, and CSS counter numerals declare empty alt text.
+- i18n: template copy moved into `journal-header`, `not-found` and `search-form` patterns.
+- `single.html` has a Comments block. The default theme's comments pattern could not be copied, because Playground serves theme PHP files unexecuted, so the markup was written from the core block set.
+- Design: poster plates reserve the overlap as padding and stack as a staircase under 60rem; the journal grid has a registered `stepped` style; the Styles preview picks up ink plus the first palette accent.
+- Fonts: Archivo Latin Extended added with the package `unicode-range` values.
+
+Not fixed: the hero is one h1 ("Type") plus separate paragraphs. Core cannot set one heading across several type sizes without custom HTML. The `film-cyan` section slug still says cyan when Basel red recolours it. The `paragraph` `align:"wide"` markup stays, as browser QA found it valid.
+
+What the skill would have prevented:
+
+- A check that a style variation sets the full palette. It now exists (`style-variation-partial-palette`) and caught `basel-red.json` before the fix.
+- Palette slug names: a rule that slugs are semantic, so a variation can recolour without lying in class names.
+- Contrast of every text colour against every ground, including dark section styles and variations. The `color-contrast` check passed here with the same defects present in dark contexts, so it does not cross section styles.
+- Focus outline colour on filled controls, and in dark grounds.
+- Specificity of theme.json output: block-style rules and per-instance rules are both `:root :where()`, so nested `css` in a section partial cannot override a block style's colour. Document it.
+- Template hierarchy: `front-page` hides a posts front page, and `home` equal to `index` is dead weight. A check for byte-identical templates would be cheap.
+- Template copy: templates are not translated, so copy belongs in PHP patterns.
+- Dead in-page anchors, comments in `single`, and generated-content numerals read aloud.
+
+Commits: the brief's trailer (`Claude Opus 5.5 (1M context)`) differs from the harness line, which named Sonnet 5.5. This pass used the brief's trailer. Two commits in the middle of the series mix structure and i18n files because a failed `git add` left earlier staged moves behind; the commit bodies say which commit carries which part.
