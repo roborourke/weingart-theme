@@ -65,6 +65,13 @@ function weingart_register_block_styles() {
 			'label' => __( 'Indexed', 'weingart' ),
 		)
 	);
+	register_block_style(
+		'core/post-template',
+		array(
+			'name'  => 'stepped',
+			'label' => __( 'Stepped index', 'weingart' ),
+		)
+	);
 }
 
 /**

@@ -149,6 +149,7 @@
 			},
 			"heading": {
 				"typography": {
+					"fontFamily": "var:preset|font-family|grotesk",
 					"fontWeight": "800",
 					"lineHeight": "1",
 					"letterSpacing": "-0.02em"

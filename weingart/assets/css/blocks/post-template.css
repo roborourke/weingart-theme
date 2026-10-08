@@ -1,13 +1,16 @@
-/* Indexed: numbers each post 01, 02, 03 in large mono type. The numeral is decorative. */
-.wp-block-post-template.is-style-indexed {
+/* Indexed and stepped: number each post 01, 02, 03 in large mono type. The numeral is decorative. */
+.wp-block-post-template.is-style-indexed,
+.wp-block-post-template.is-style-stepped {
 	counter-reset: weingart-index;
 }
 
-.wp-block-post-template.is-style-indexed > li {
+.wp-block-post-template.is-style-indexed > li,
+.wp-block-post-template.is-style-stepped > li {
 	counter-increment: weingart-index;
 }
 
-.wp-block-post-template.is-style-indexed > li::before {
+.wp-block-post-template.is-style-indexed > li::before,
+.wp-block-post-template.is-style-stepped > li::before {
 	content: counter(weingart-index, decimal-leading-zero);
 	content: counter(weingart-index, decimal-leading-zero) / "";
 	display: block;
@@ -17,4 +20,33 @@
 	line-height: 0.8;
 	letter-spacing: -0.06em;
 	margin-block-end: var(--wp--preset--spacing--20);
+}
+
+/* Stepped: each column sits one step lower than the one before, like the hero headline. */
+.wp-block-post-template.is-style-stepped > li:nth-child(3n + 2) {
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+
+.wp-block-post-template.is-style-stepped > li:nth-child(3n + 3) {
+	margin-block-start: var(--wp--preset--spacing--60);
+}
+
+/* Narrow screens: one column, each post indented one step further than the last. */
+@media (max-width: 48rem) {
+	.wp-block-post-template.is-style-stepped {
+		grid-template-columns: 1fr;
+	}
+
+	.wp-block-post-template.is-style-stepped > li:nth-child(3n + 2),
+	.wp-block-post-template.is-style-stepped > li:nth-child(3n + 3) {
+		margin-block-start: 0;
+	}
+
+	.wp-block-post-template.is-style-stepped > li:nth-child(3n + 2) {
+		margin-inline-start: var(--wp--preset--spacing--40);
+	}
+
+	.wp-block-post-template.is-style-stepped > li:nth-child(3n + 3) {
+		margin-inline-start: calc(var(--wp--preset--spacing--40) * 2);
+	}
 }

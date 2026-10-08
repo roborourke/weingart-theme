@@ -2,7 +2,7 @@
 /**
  * Title: Post grid
  * Slug: weingart/post-grid
- * Description: The latest posts in three columns, numbered 01, 02, 03.
+ * Description: The latest posts in three columns, numbered 01, 02, 03 and stepped down column by column.
  * Categories: weingart, query
  * Keywords: posts, grid, journal, latest
  * Viewport Width: 1400
@@ -23,7 +23,7 @@
 
 	<!-- wp:query {"queryId":11,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"align":"wide"} -->
 	<div class="wp-block-query alignwide">
-		<!-- wp:post-template {"className":"is-style-indexed","layout":{"type":"grid","columnCount":3}} -->
+		<!-- wp:post-template {"className":"is-style-stepped","layout":{"type":"grid","columnCount":3}} -->
 			<!-- wp:post-terms {"term":"category"} /-->
 
 			<!-- wp:post-title {"level":3,"isLink":true,"fontSize":"x-large"} /-->
