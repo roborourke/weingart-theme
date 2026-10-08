@@ -44,6 +44,7 @@
 	.wp-block-group.is-style-overprint {
 		--weingart-overlap: var(--wp--preset--spacing--20);
 		flex-direction: column;
+		align-items: stretch;
 	}
 
 	.wp-block-group.is-style-overprint > *,
