@@ -2,7 +2,7 @@
 /**
  * Title: Archive loop
  * Slug: weingart/archive-loop
- * Description: The main query as a two-column numbered list with pagination. Used by the index, archive and search templates.
+ * Description: The main query as a three-column stepped, numbered list with pagination. Used by the index, archive and search templates.
  * Categories: weingart, query
  * Keywords: archive, posts, list, pagination
  * Viewport Width: 1400
@@ -13,10 +13,10 @@
 ?>
 <!-- wp:query {"queryId":12,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide"} -->
 <div class="wp-block-query alignwide">
-	<!-- wp:post-template {"className":"is-style-indexed","layout":{"type":"grid","columnCount":2}} -->
+	<!-- wp:post-template {"className":"is-style-stepped","layout":{"type":"grid","columnCount":3}} -->
 		<!-- wp:post-terms {"term":"category"} /-->
 
-		<!-- wp:post-title {"level":2,"isLink":true,"fontSize":"xx-large"} /-->
+		<!-- wp:post-title {"level":2,"isLink":true,"fontSize":"x-large"} /-->
 
 		<!-- wp:post-excerpt {"moreText":"","excerptLength":28} /-->
 
